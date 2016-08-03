@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
+            case .NotDetermined, .Restricted, .Denied:
+                print("No access")
+                makeDisabledLocationServicesViewControllerInitalViewController()
+            case .AuthorizedAlways, .AuthorizedWhenInUse:
+                print("Access")
+            }
+        } else {
+            print("Location services are not enabled")
+            makeDisabledLocationServicesViewControllerInitalViewController()
+        }
         return true
+    }
+    
+    func makeDisabledLocationServicesViewControllerInitalViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let disabledLocationServicesViewControllerStoryboardIdentifier = "DisabledLocationServicesViewController"
+        guard let initialViewController = storyboard.instantiateViewControllerWithIdentifier(disabledLocationServicesViewControllerStoryboardIdentifier) as? DisabledLocationServicesViewController else {
+            print("Could not instantiate a \(disabledLocationServicesViewControllerStoryboardIdentifier) from the storyboard in the App Delegate")
+            return
+        }
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(application: UIApplication) {

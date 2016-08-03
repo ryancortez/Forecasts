@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Disabled Location Services View Controller-->
+        <scene sceneID="pw2-13-oGz">
+            <objects>
+                <viewController storyboardIdentifier="DisabledLocationServicesViewController" id="Ugy-0T-h3l" customClass="DisabledLocationServicesViewController" customModule="Forecasts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1EZ-on-QBG"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Lc-os-Q6G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mkT-RS-wbs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-RW-XLE">
+                                <rect key="frame" x="20" y="302" width="560" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="vKc-Xi-ggI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Enable Location Services"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecasts needs access to your iPhone's location to display the current weather" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-Uv-RmC">
+                                <rect key="frame" x="20" y="28" width="560" height="266"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X6i-Uv-RmC" firstAttribute="top" secondItem="1EZ-on-QBG" secondAttribute="bottom" constant="8" symbolic="YES" id="9jj-i7-X5X"/>
+                            <constraint firstItem="1Lc-os-Q6G" firstAttribute="top" secondItem="KTp-RW-XLE" secondAttribute="bottom" constant="165" id="LpP-r1-Iiq"/>
+                            <constraint firstItem="X6i-Uv-RmC" firstAttribute="trailing" secondItem="mkT-RS-wbs" secondAttribute="trailingMargin" id="ecK-Lu-V5V"/>
+                            <constraint firstItem="X6i-Uv-RmC" firstAttribute="leading" secondItem="KTp-RW-XLE" secondAttribute="leading" id="h6v-0h-Hok"/>
+                            <constraint firstItem="X6i-Uv-RmC" firstAttribute="leading" secondItem="mkT-RS-wbs" secondAttribute="leadingMargin" id="qpy-CS-mD7"/>
+                            <constraint firstItem="KTp-RW-XLE" firstAttribute="top" secondItem="X6i-Uv-RmC" secondAttribute="bottom" constant="8" symbolic="YES" id="x2a-Vg-rcM"/>
+                            <constraint firstItem="X6i-Uv-RmC" firstAttribute="trailing" secondItem="KTp-RW-XLE" secondAttribute="trailing" id="zzn-ru-1wY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGO-Ko-ftX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="-380"/>
+        </scene>
+        <!--Weather Forecast View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherForecastViewController" id="BYZ-38-t0r" customClass="WeatherForecastViewController" customModule="Forecasts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
