@@ -1,4 +1,4 @@
-//
+    //
 //  ForecastsTests.swift
 //  ForecastsTests
 //
@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Forecasts
+import CoreLocation
 
 class ForecastsTests: XCTestCase {
     
@@ -19,7 +20,7 @@ class ForecastsTests: XCTestCase {
         let mainStoryboardName = "Main"
         self.storyboard = UIStoryboard(name: mainStoryboardName, bundle: NSBundle.mainBundle())
         let weatherForecastViewControllerReuseIdentifier = "WeatherForecastViewController"
-        guard let controller = self.storyboard.instantiateViewControllerWithIdentifier(weatherForecastViewControllerReuseIdentifier) as?WeatherForecastViewController else {
+        guard let controller = self.storyboard.instantiateViewControllerWithIdentifier(weatherForecastViewControllerReuseIdentifier) as? WeatherForecastViewController else {
         print("Could not convert UIViewController to WeatherForecastViewController")
         return
         }
@@ -29,9 +30,4 @@ class ForecastsTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-   
-    func testIfUserLocationWasCaptured() {
-        XCTAssertNotNil(weatherForecastViewController.currentLocation)
-    }
-    
 }

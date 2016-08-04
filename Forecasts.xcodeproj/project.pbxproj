@@ -15,6 +15,10 @@
 		940CB6B91D5168150023D37D /* ForecastsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CB6B81D5168150023D37D /* ForecastsTests.swift */; };
 		940CB6C41D5168150023D37D /* ForecastsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CB6C31D5168150023D37D /* ForecastsUITests.swift */; };
 		940CB6D51D51772B0023D37D /* DisabledLocationServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CB6D41D51772B0023D37D /* DisabledLocationServicesViewController.swift */; };
+		940CB6E01D52A9860023D37D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940CB6DF1D52A9860023D37D /* NotificationCenter.framework */; };
+		940CB6E31D52A9860023D37D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CB6E21D52A9860023D37D /* TodayViewController.swift */; };
+		940CB6E61D52A9860023D37D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940CB6E41D52A9860023D37D /* MainInterface.storyboard */; };
+		940CB6EA1D52A9860023D37D /* ForecastTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 940CB6DD1D52A9860023D37D /* ForecastTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 940CB69F1D5168150023D37D;
 			remoteInfo = Forecasts;
 		};
+		940CB6E81D52A9860023D37D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 940CB6981D5168150023D37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940CB6DC1D52A9860023D37D;
+			remoteInfo = ForecastTodayExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		940CB6EE1D52A9860023D37D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				940CB6EA1D52A9860023D37D /* ForecastTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		940CB6A01D5168150023D37D /* Forecasts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecasts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +74,13 @@
 		940CB6C31D5168150023D37D /* ForecastsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsUITests.swift; sourceTree = "<group>"; };
 		940CB6C51D5168150023D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		940CB6D41D51772B0023D37D /* DisabledLocationServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisabledLocationServicesViewController.swift; sourceTree = "<group>"; };
+		940CB6DD1D52A9860023D37D /* ForecastTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForecastTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		940CB6DF1D52A9860023D37D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		940CB6E21D52A9860023D37D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		940CB6E51D52A9860023D37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		940CB6E71D52A9860023D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940CB6EF1D52AD990023D37D /* Forecasts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Forecasts.entitlements; path = Forecasts/Forecasts.entitlements; sourceTree = "<group>"; };
+		9441D9DA1D538DCE003F422E /* ForecastTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ForecastTodayExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +105,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		940CB6DA1D52A9860023D37D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940CB6E01D52A9860023D37D /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,7 +122,10 @@
 				940CB6A21D5168150023D37D /* Forecasts */,
 				940CB6B71D5168150023D37D /* ForecastsTests */,
 				940CB6C21D5168150023D37D /* ForecastsUITests */,
+				940CB6E11D52A9860023D37D /* ForecastTodayExtension */,
+				940CB6DE1D52A9860023D37D /* Frameworks */,
 				940CB6A11D5168150023D37D /* Products */,
+				940CB6EF1D52AD990023D37D /* Forecasts.entitlements */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +135,7 @@
 				940CB6A01D5168150023D37D /* Forecasts.app */,
 				940CB6B41D5168150023D37D /* ForecastsTests.xctest */,
 				940CB6BF1D5168150023D37D /* ForecastsUITests.xctest */,
+				940CB6DD1D52A9860023D37D /* ForecastTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,9 +179,9 @@
 		940CB6D21D5168360023D37D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				940CB6D61D525E790023D37D /* Initial Launch */,
 				940CB6A31D5168150023D37D /* AppDelegate.swift */,
 				940CB6A51D5168150023D37D /* WeatherForecastViewController.swift */,
-				940CB6D41D51772B0023D37D /* DisabledLocationServicesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +196,33 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		940CB6D61D525E790023D37D /* Initial Launch */ = {
+			isa = PBXGroup;
+			children = (
+				940CB6D41D51772B0023D37D /* DisabledLocationServicesViewController.swift */,
+			);
+			name = "Initial Launch";
+			sourceTree = "<group>";
+		};
+		940CB6DE1D52A9860023D37D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				940CB6DF1D52A9860023D37D /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940CB6E11D52A9860023D37D /* ForecastTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9441D9DA1D538DCE003F422E /* ForecastTodayExtension.entitlements */,
+				940CB6E21D52A9860023D37D /* TodayViewController.swift */,
+				940CB6E41D52A9860023D37D /* MainInterface.storyboard */,
+				940CB6E71D52A9860023D37D /* Info.plist */,
+			);
+			path = ForecastTodayExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,10 +233,12 @@
 				940CB69C1D5168150023D37D /* Sources */,
 				940CB69D1D5168150023D37D /* Frameworks */,
 				940CB69E1D5168150023D37D /* Resources */,
+				940CB6EE1D52A9860023D37D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				940CB6E91D52A9860023D37D /* PBXTargetDependency */,
 			);
 			name = Forecasts;
 			productName = Forecasts;
@@ -208,6 +281,23 @@
 			productReference = 940CB6BF1D5168150023D37D /* ForecastsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		940CB6DC1D52A9860023D37D /* ForecastTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940CB6EB1D52A9860023D37D /* Build configuration list for PBXNativeTarget "ForecastTodayExtension" */;
+			buildPhases = (
+				940CB6D91D52A9860023D37D /* Sources */,
+				940CB6DA1D52A9860023D37D /* Frameworks */,
+				940CB6DB1D52A9860023D37D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForecastTodayExtension;
+			productName = ForecastTodayExtension;
+			productReference = 940CB6DD1D52A9860023D37D /* ForecastTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +310,12 @@
 				TargetAttributes = {
 					940CB69F1D5168150023D37D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DJM86A6U7U;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					940CB6B31D5168150023D37D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -228,6 +324,15 @@
 					940CB6BE1D5168150023D37D = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 940CB69F1D5168150023D37D;
+					};
+					940CB6DC1D52A9860023D37D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DJM86A6U7U;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -247,6 +352,7 @@
 				940CB69F1D5168150023D37D /* Forecasts */,
 				940CB6B31D5168150023D37D /* ForecastsTests */,
 				940CB6BE1D5168150023D37D /* ForecastsUITests */,
+				940CB6DC1D52A9860023D37D /* ForecastTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +379,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940CB6DB1D52A9860023D37D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940CB6E61D52A9860023D37D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +419,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		940CB6D91D52A9860023D37D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940CB6E31D52A9860023D37D /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,6 +439,11 @@
 			isa = PBXTargetDependency;
 			target = 940CB69F1D5168150023D37D /* Forecasts */;
 			targetProxy = 940CB6C01D5168150023D37D /* PBXContainerItemProxy */;
+		};
+		940CB6E91D52A9860023D37D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 940CB6DC1D52A9860023D37D /* ForecastTodayExtension */;
+			targetProxy = 940CB6E81D52A9860023D37D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,6 +462,14 @@
 				940CB6AD1D5168150023D37D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		940CB6E41D52A9860023D37D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940CB6E51D52A9860023D37D /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -429,6 +564,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forecasts/Forecasts.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Forecasts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.Forecasts;
@@ -440,6 +577,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forecasts/Forecasts.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Forecasts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.Forecasts;
@@ -493,6 +632,30 @@
 			};
 			name = Release;
 		};
+		940CB6EC1D52A9860023D37D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForecastTodayExtension/ForecastTodayExtension.entitlements;
+				INFOPLIST_FILE = ForecastTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.Forecasts.ForecastTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		940CB6ED1D52A9860023D37D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForecastTodayExtension/ForecastTodayExtension.entitlements;
+				INFOPLIST_FILE = ForecastTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.Forecasts.ForecastTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -512,6 +675,7 @@
 				940CB6CA1D5168160023D37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		940CB6CB1D5168160023D37D /* Build configuration list for PBXNativeTarget "ForecastsTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +684,7 @@
 				940CB6CD1D5168160023D37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		940CB6CE1D5168160023D37D /* Build configuration list for PBXNativeTarget "ForecastsUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +693,16 @@
 				940CB6D01D5168160023D37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940CB6EB1D52A9860023D37D /* Build configuration list for PBXNativeTarget "ForecastTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940CB6EC1D52A9860023D37D /* Debug */,
+				940CB6ED1D52A9860023D37D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

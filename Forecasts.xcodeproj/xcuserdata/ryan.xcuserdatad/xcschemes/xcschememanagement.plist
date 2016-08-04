@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ForecastTodayExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Forecasts (with All Tests).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Forecasts (with UI Tests).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Forecasts (with Unit Tests).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Forecasts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>940CB6BE1D5168150023D37D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>940CB6DC1D52A9860023D37D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

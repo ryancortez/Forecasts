@@ -13,36 +13,13 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        if CLLocationManager.locationServicesEnabled() {
-            switch(CLLocationManager.authorizationStatus()) {
-            case .NotDetermined, .Restricted, .Denied:
-                print("No access")
-                makeDisabledLocationServicesViewControllerInitalViewController()
-            case .AuthorizedAlways, .AuthorizedWhenInUse:
-                print("Access")
-            }
-        } else {
-            print("Location services are not enabled")
-            makeDisabledLocationServicesViewControllerInitalViewController()
-        }
         return true
     }
     
-    func makeDisabledLocationServicesViewControllerInitalViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let disabledLocationServicesViewControllerStoryboardIdentifier = "DisabledLocationServicesViewController"
-        guard let initialViewController = storyboard.instantiateViewControllerWithIdentifier(disabledLocationServicesViewControllerStoryboardIdentifier) as? DisabledLocationServicesViewController else {
-            print("Could not instantiate a \(disabledLocationServicesViewControllerStoryboardIdentifier) from the storyboard in the App Delegate")
-            return
-        }
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-    }
-
+    // MARK: - Change in Application State
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
